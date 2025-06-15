@@ -19,7 +19,7 @@ def get_youtube_transcript(video_id):
 
 # Function to generate JSON summary using Gemini
 def summarize_transcript_with_gemini(transcript_text):
-    client = genai.Client(api_key="AIzaSyB5ydv-_eICfMUrQKmacj1hbF3ziXZszzU")
+    client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
     model = "gemini-2.0-flash"
 
